@@ -2,7 +2,7 @@ changed my repo structure several times until i'm satisfied
 explored the data provided by data-cleaning group
 split the data only by the last tone in every line of the lyrics
 can be viewed as "单押"
-upload the data split to my rope
+upload the data split to my repo
 
 i think this work is useful in the near future
 though some of us are still struggling with those stupid models and others occupied by huge amount of definitions and calculations in NN area
