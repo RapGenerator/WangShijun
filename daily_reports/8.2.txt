@@ -1,0 +1,32 @@
+thinking about how to make better split ways to deal with more type of rhymes
+the results of my research today are as follows:
+    aspect 1: different types of rhyme
+        1.1 双押 N押
+            很容易识别
+        1.2 隔行韵 夹韵 中间韵
+            能识别，但不容易
+        1.3 中英夹杂韵
+            暂不知道该怎么识别
+    aspect 2: more precise rhyme definition
+        2.1 所有 相对应的 前响复韵母 与 中响复韵母，应算押韵
+            说 & 我   爱 & 坏   笑 & 好
+            已研究完此类所有情况
+        2.2 部分 相对应的 后响复韵母 与 单韵母，应算押韵
+            虾 & 话 & 发
+            也有部分对应不能算押韵...具体分界还在研究
+        2.3 韵腹 相同的 后响复韵母，应算押韵
+            界 & 越
+            此规则是否适用于所有情况，暂不知，还在研究
+        2.4 部分 相对应的 舌尖鼻韵母 与 舌根鼻韵母，应算押韵
+            英 & 音   声 & 身
+            也有部分对应不能算押韵...具体分界还在研究
+        2.5 部分 相对应的 不含介母的舌尖鼻韵母 与 含介母的舌尖鼻韵母，应算押韵
+            饭 & 换
+            也有部分对应不能算押韵...具体分界还在研究
+        2.6 相对应的 不含介母的舌根鼻韵母 与 含介母的舌根鼻韵母，应算押韵
+            方 & 向 & 晃
+            此规则是否适用于所有情况，暂不知，还在研究
+        2.7 还存在上述6条规则无法囊括的押韵情况
+            还在研究
+
+wish you'll find that interesting :)
