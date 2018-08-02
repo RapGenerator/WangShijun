@@ -1,3 +1,6 @@
+/logs/
+/metadata.tsv
+/*.png
 /char-rnn/logs/
 /char-rnn/metadata.tsv
 /char-rnn/*.png

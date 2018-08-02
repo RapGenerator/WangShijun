@@ -13,7 +13,11 @@ free to change line 199 in code "gen_lyrics.py"
 > prime = 'what you give to the rnn to begin generating with'
 
 ## performance
-- stupid, easily trapped in endless loop  
+- stupid, easily trapped in endless loop
+
+  - using raw data
+eg:
+
 放肆一下  
 山  
 我的痛苦 但是我的大鹏加  
@@ -33,5 +37,9 @@ I money way
 我的心情  
 军日谂8 un woney live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿的 live 蔡镇鸿
 
-- rhyme with the split data  
-have been tested by LuYiyang
+  - using split data
+
+eg:
+
+嘻哈一下  
+我们都领悟一下 当hap la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la la

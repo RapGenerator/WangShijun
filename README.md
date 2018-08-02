@@ -14,6 +14,9 @@ rnn method based on char
   - not coherent, not logical
   - nearly no rhyme
 - using data split (in ./data_split_bytone/)
+  - proformance looks stupid as well
+  - easily trapped in endless loop lyrics
+  - looks logical in someway
   - rhyme the same with training data
 
 ## data_split_bytone

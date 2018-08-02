@@ -199,7 +199,7 @@ def sample(data, model, args):
         saver.restore(sess, ckpt)
 
         # initial phrase to warm RNN
-        prime = u'放肆一下'
+        prime = u'开心一下'
         print(prime)
         state = sess.run(model.cell.zero_state(1, tf.float32))
 
@@ -228,7 +228,7 @@ def sample(data, model, args):
 def main(infer):
 
     args = HParam()
-    data = DataGenerator('/home/shijun/文档/DeeCamp/RAPPER/WSJrepo/data_split_bytone/danya/e_intail.txt', args)
+    data = DataGenerator('/home/shijun/文档/DeeCamp/RAPPER/WSJrepo/data_split_bytone/danya/ia_intail.txt', args)
     model = Model(args, data, infer=infer)
 
     run_fn = sample if infer else train
