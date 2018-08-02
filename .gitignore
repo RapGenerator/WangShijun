@@ -1,3 +1,4 @@
 /char-rnn/logs/
 /char-rnn/metadata.tsv
 /char-rnn/*.png
+/data_split_bytone/.ipynb_checkpoints/
