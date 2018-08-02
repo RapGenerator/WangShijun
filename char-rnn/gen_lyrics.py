@@ -10,13 +10,13 @@ from tensorflow.nn import rnn_cell
 from tensorflow.contrib import legacy_seq2seq as seq2seq
 
 import matplotlib.pyplot as plt
-
+# import pdb
 
 class HParam():
 
     batch_size = 32
-    n_epoch = 100 #50
-    learning_rate = 0.001 #0.1 
+    n_epoch = 50 #100 #50
+    learning_rate = 0.01 #0.1 
     decay_steps = 1000
     decay_rate = 0.9
     grad_clip = 5
@@ -162,6 +162,9 @@ def train(data, model, args):
             (data.total_len // args.seq_length) // args.batch_size
         x = []
         y = []
+
+        # pdb.set_trace()
+
         for i in range(max_iter):
             learning_rate = args.learning_rate * \
                 (args.decay_rate ** (i // args.decay_steps))
@@ -184,7 +187,7 @@ def train(data, model, args):
         plt.ylabel('train loss')
         plt.plot(x, y, 'r', marker='.')
         plt.grid()
-        plt.savefig('loss descend lr' + str(args.learning_rate))
+        plt.savefig('loss descend lr' + str(args.learning_rate) + '.png')
         plt.show()
 
 
@@ -225,7 +228,7 @@ def sample(data, model, args):
 def main(infer):
 
     args = HParam()
-    data = DataGenerator('8.txt', args)
+    data = DataGenerator('/home/shijun/文档/DeeCamp/RAPPER/WSJrepo/data_split_bytone/danya/e_intail.txt', args)
     model = Model(args, data, infer=infer)
 
     run_fn = sample if infer else train

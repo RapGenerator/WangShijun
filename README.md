@@ -6,10 +6,19 @@
 - Package: tensorflow 1.9
 
 ## char-rnn
-rnn method based on char \
-using unclean data
+rnn method based on char
+
+- using raw data (provided by our teacher)
+  - proformance looks stupid
+  - easily trapped in endless loop lyrics
+  - not coherent, not logical
+  - nearly no rhyme
+- using data split (in ./data_split_bytone/)
+  - rhyme the same with training data
 
 ## data_split_bytone
-my exploring based on file "df_all_pinyin_clear.csv" provided by data-cleaning group \
-splitting data into several files, each file contains lyrics with the same tone \
+my exploring based on file "df_all_pinyin_clear.csv" provided by data-cleaning group
+
+splitting data into several files, each file contains lyrics with the same tone
+
 hope you find them useful
