@@ -1,3 +1,0 @@
-model_checkpoint_path: "lyrics_model.ckpt-875"
-all_model_checkpoint_paths: "lyrics_model.ckpt-0"
-all_model_checkpoint_paths: "lyrics_model.ckpt-875"
