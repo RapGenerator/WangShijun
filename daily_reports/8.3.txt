@@ -1,0 +1,5 @@
+wrote some bugs when trying dealing with rhyme
+learned the framework of seq2seq
+learned the idea of beam search
+discussed with XiangRuichang, figured out some questions for him (what he explained and summarized to us in the afternoon)
+joined in algorithm-group, to_do_list.append('studying paper "Chinese Poetry Generation with Planning based Neural Network"')
