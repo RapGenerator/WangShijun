@@ -36,4 +36,5 @@ paper assigned to me and YiWeiwen to read and give a talk
 
 ## NotesforChinesePoetryGenerationwithPlanningbasedNeuralNetwork.md
 my note when reading the paper above
+
 in English, without any picture
