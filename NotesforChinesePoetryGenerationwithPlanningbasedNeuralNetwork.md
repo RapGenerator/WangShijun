@@ -31,13 +31,16 @@
 
 - poem planning
 	- the contents of poems, deal with "what to say" problem
-	- user's writing intent -> a set of keywords/ a sentence/ a document described by natural language -> determine a sequence of sub-topics for the poem
+	- user's writing intent -> a set of keywords/ a sentence/ a document described by natural language -> determine a sequence of 4 sub-topics for the poem
 	- each sub-topic is related to the main topic, and represents an aspect of the writing intent
 	- each line represented by a sub-topic
+	- Keyword Extraction, if the user's input is too long, using TextRank algorithm, while keeping the original order
+	- Keyword Expansion, if the user's input is too short, using RNNLM-based method or Knowledge-based method
 - poem generation
 	- surface realization, deal with "how to say" problem
 	- using a modified RNN
 		- modified for supporting encoding of both sub-topics and the preceding lines
+		- the specific detail of modification needs to refer to the paper directly
 	- sequentially, generated line by line
 	- each line is generated according to the corresponding sub-topic and the preceding generated lines
 
@@ -46,5 +49,18 @@
 - every line has a closer connection to user's intent
 - can learn from extra knowledge source besides the poem dataset
 	- can use web data or encyclopedias to generate sub-topics
-	- eg: intent: 'Barack Obama' -> subtopics: 'power', 'outstanding'...
+	- eg: intent: 'Barack Obama' -> sub-topics such as: 'power', 'outstanding'...
 
+## evaluation metrics
+
+- HUMAN JUDGES!!!
+- 4 evaluation standards
+
+| standard | explanation |
+|----------|------|
+| poeticness | does the poem follow the rhyme and tone requirements? |
+| fluency | does the poem read smoothly and fluently? |
+| coherence | is the poem coherent across lines? |
+| meaning | does the poem have a certain meaning and artistic conception? |
+
+- i think the first standard can be computing by algorithm based on certain rules of rhyme
