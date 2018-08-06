@@ -1,0 +1,81 @@
+# Goals for Algorithm-group and WangShijun's ideas
+
+using both English and Chinese for my own convenience and yours'
+
+## 4 General Goals raised up at 8.2
+- 语义通顺
+- 评判标准
+- 根据“主题”生成歌词
+- 押韵
+
+## my Decomposition for our goals & my coresponding Ideas (may be updated at any time)
+- 语义通顺
+    - thematic correspondence
+        - between sentences
+        - 几句歌词都在围绕同一个主题，而不是各说各话
+    - semantic coherence
+        - within sentences
+        - 一句歌词本身是“人话”
+        - seq2seq比RNN更适合
+- 评判标准
+    - subjective judging by human
+        - 一篇论文里就是这么干的。[详情](https://github.com/RapGenerator/WangShijun/blob/master/NotesforChinesePoetryGenerationwithPlanningbasedNeuralNetwork.md#evaluation-metrics)
+    - rhyme要求是可以按押韵规则写程序来评价的
+    - fluency/coherence/meaning要求，除了人工评价外，暂想不到评判标准
+    - BLEU 与 cross_entrocy 的结合（YiWeiwen提出）
+- 根据“主题”生成歌词
+    - ideas below are inspired by [the paper](https://github.com/RapGenerator/WangShijun/blob/master/Chinese%20Poetry%20Generation%20with%20Planning%20based%20Neural%20Network.pdf)
+    - 流程：
+        - 用户选择主题
+            - 前端需要考虑
+            - 涉及到 主题的展示形式
+        - AI理解用户选择的主题的语义
+            - 受 主题的展示形式 影响
+            - 不同的主题展示形式应用 不同的 语义理解方式
+        - AI将语义融入生成的歌词中
+            - 不同的主题展示形式应用 相同的 语义融入方式
+            - 上一点就要求：对于不同的主题展示形式，其语义理解的output是一致的
+    - 对用户，“主题”以什么形式展现？
+        - 当然是在 natural language 的范畴内，不考虑图片、音乐、视频blabla
+        - 一个关键词？
+        - 几个关键词？
+        - 一句话？
+        - 一段话？
+        - 也可以多种形式都支持
+        - 如何展现“主题”会影响到后续的语义处理
+    - AI 理解了语义之后的统一output
+        - 几个关键词
+        - 都和用户选择的主题相关
+        - 每个关键词用于生成一段歌词
+            - 一段可以是一句，也可以是两句，或者四句
+            - 一句还是两句或是四句，要在歌词生成之前定好，不能出现 一个关键词用于生成一句歌词、另一个关键词用于生成两句歌词的情况
+            - 每段歌词拼在一起成为最终的歌词
+    - AI 针对 不同的主题展现形式 的语义理解方式
+        - 一个关键词/几个关键词：keywords expansion
+            - 将关键词扩充为固定数量个关键词
+            - 固定数量 有多少个，要根据我们最终想要生成多少句歌词来定
+                - 最终生成的歌词句数 = 语义理解output的关键词数 * 由一个关键词生成的歌词句数
+            - 关键词扩充方式
+                - co-occurence-based method
+                - RNNLM-based method
+                - Knowledge-based method
+        - 一句话/一段话：keywords extraction
+            - 从长文本中抽取关键词
+            - 抽取关键词方式
+                - based on TextRank
+                    - jieba.analyse.textrank(sentence, topK=20, withWeight=False, allowPOS=('ns', 'n', 'vn', 'v'))
+                - based on TF-IDF
+                    - jieba.analyse.extract_tags(sentence, topK=20, withWeight=False, allowPOS=())
+            - 如果抽取出的关键词个数不够我们的要求，可以再抽取了关键词后再用keywords expansion
+- 押韵
+    - 押韵有两个要求：rhyme与tone。我之前将rhyme与tone混为一谈，看了论文才发现两者是不同的东西
+    - rhyme
+        - 即，我之前理解的“押韵”
+        - 古诗的押韵 与 嘻哈歌词的押韵 的不同
+            - 古诗的押韵之处在第一、二、四句，押韵在最末一个字
+            - 嘻哈歌词的押韵之处在每一句的最末，不一定只押韵在最末的一个字，可以是多个字
+    - tone
+        - 平、仄 声调
+        - 一声、二声 为 平声，三声、四声 为 仄声
+        - 对于嘻哈歌词，没有声调要求
+        - 不用深入研究，弃

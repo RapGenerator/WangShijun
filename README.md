@@ -1,9 +1,9 @@
 # WangShijun
 
-## environment
-- OS: Ubuntu 17.10
-- Language: Python 3.6
-- Package: tensorflow 1.9
+## Goals for Algorithm-group & My Ideas.md
+as its name
+
+you really need to have a look at it 
 
 ## Chinese Poetry Generation with Planning based Neural Network.pdf
 paper assigned to me and YiWeiwen to read and give a talk
@@ -41,3 +41,8 @@ rnn method based on char
 
 ## daily_reports
 as its name
+
+## environment
+- OS: Ubuntu 17.10
+- Language: Python 3.6
+- Package: tensorflow 1.9
