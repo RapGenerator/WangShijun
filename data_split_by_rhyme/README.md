@@ -1,4 +1,4 @@
-# data splitting by tone
+# data splitting by rhyme
 
 ## motivation
 - using one single split data file to train the model, can make the generation text all rhyme definitely

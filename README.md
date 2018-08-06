@@ -16,10 +16,10 @@ in English, without any picture
 ## Simon_Vera.pdf
 a PPT to introduce the paper above
 
-## data_split_bytone
+## data_split_by_rhyme
 my exploring based on file "df_all_pinyin_clear.csv" provided by data-cleaning group
 
-splitting data into several files, each file contains lyrics with the same tone
+splitting data into several files, each file contains lyrics with the same rhyme
 
 hope you find them useful
 
