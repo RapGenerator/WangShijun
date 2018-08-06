@@ -1,5 +1,7 @@
 # Notes for "Chinese Poetry Generation with Planning based Neural Network"
 
+[the paper](https://github.com/RapGenerator/WangShijun/blob/master/Chinese%20Poetry%20Generation%20with%20Planning%20based%20Neural%20Network.pdf)
+
 ## problem statement
 
 - generate classical Chinese poetry -- quatrain
