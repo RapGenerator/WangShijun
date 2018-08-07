@@ -4,4 +4,4 @@
 /char-rnn/logs/
 /char-rnn/metadata.tsv
 /char-rnn/*.png
-/data_split_bytone/.ipynb_checkpoints/
+/data_split_by_rhyme/.ipynb_checkpoints/
