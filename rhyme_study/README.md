@@ -57,14 +57,18 @@ follow represents are consist with that used in pypinyin.lazy_pinyin() with stri
 - how to quantity the rhyme level?
 	- between different rhyme forms
 	- 排韵
+		- 每句均押韵
 		- 多于两行
 		- 单押
 		- 双押
 		- N押
 	- 隔行韵
+		- 偶数行押韵
 		- 多于四行，偶数行
 	- 交韵
+		- 奇数行押一个韵，偶数行押一个韵
 		- 多于四行，偶数行
 	- 抱韵
+		- 第一、四行押一个韵，第二、三行押一个韵
 		- 四行
 
