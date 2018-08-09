@@ -14,7 +14,8 @@ to make the generated lyrics rhyme, at least rhyme more
 	- **the amount of each training dataset is far not adequate**
 - score the paragraph
 	- writing a ranking function
-	- using in beam-search step to distinguish most rhyme paragraph
+	    - using in beam-search step to rank paragraph based on rhyme **hard**
+	    - using after beam-search step to distinguish most rhyme paragraph
 	- give more rhyme paragraph a higher score, while less rhyme paragraph a lower score
 	- **need to choose an appropriate beam-size**
 
@@ -26,13 +27,15 @@ to make the generated lyrics rhyme, at least rhyme more
 	- based on rhyme form
 		- like 排韵，隔行韵，交韵，抱韵 etc
 - 不同的韵母不一定不押韵！how to define "rhyme or not"
+    - using strict=False or strict=True? **need to try out**
+    - reviewing 'in' rhyme with 'ing' or not? **need to try out**
 
 韵母表
 
 follow represents are consist with that used in pypinyin.lazy_pinyin() with strict=False/True
 
 | strict=False | i | u | u | | strict=True | i | u | v |
-|-|-|-|-|-|-|-|-|-|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | a  | ia  | ua  |    || a  | ia  | ua  |    |
 | o  |     | uo  |    || o  |     | uo  |    |
 | e  | ie  |     | ue || e  | ie  |     | ve |
