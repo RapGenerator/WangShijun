@@ -11,7 +11,7 @@
 
 
 ## description
-- in danya
+- in old-danya
 
   - each "x_intail.txt" contains all the lyrics with tone "x" in the end of one line
 
