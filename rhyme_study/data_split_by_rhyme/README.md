@@ -11,11 +11,33 @@
 
 
 ## description
+- in danya
+    
+    - using designed rules for rhyming judging
+    
+    - each "x.txt" contains all the lyrics with tone "x" in the end of one line
+
+- in shuangya
+
+    - using designed rules for rhyming judging
+    
+    - each "x+y.txt" contains all the lyrics with tone "x" & "y" in the end of one line
+    
+    - contains some empty files
+
+- in sanya
+
+    - using designed rules for rhyming judging
+    
+    - each "x+y+z.txt" contains all the lyrics with tone "x" & "y" & "z" in the end of one line
+
+    - contains some empty files
+
 - in old-danya
 
-  - each "x_intail.txt" contains all the lyrics with tone "x" in the end of one line
+    - each "x_intail.txt" contains all the lyrics with tone "x" in the end of one line
 
-  - statistical description:
+    - statistical description:
 
 most common rhyme:
 
